@@ -24,8 +24,10 @@ export function getToken(code, cb) {
 export function refreshToken(token) {
   let client = getClient();
   client.setCredentials(token);
-  return client.refreshAccessToken((err, token) => {
-    return token
+  return new Promise((resolve, reject) => {
+    client.refreshAccessToken((err, token) => {
+      return token
+    })
   })
 }
 
