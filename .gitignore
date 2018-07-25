@@ -1,7 +1,4 @@
 env.sh
 node_modules
 package-lock.json
-client_id.json
-token.json
-paul-s-schedulerbot-5eeb13ae5a1c.json
-Jeeves-321ef279a493.json
+credentials/*
