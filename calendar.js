@@ -26,7 +26,8 @@ export function refreshToken(token) {
   client.setCredentials(token);
   return new Promise((resolve, reject) => {
     client.refreshAccessToken((err, token) => {
-      return token
+      if(err) reject(err)
+      resolve(token)
     })
   })
 }
